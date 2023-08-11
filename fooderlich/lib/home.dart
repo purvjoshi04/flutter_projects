@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fooderlich/card2.dart';
+import 'package:fooderlich/card3.dart';
 import 'card1.dart';
 
 // 1
@@ -14,10 +16,8 @@ class HomeState extends State<Home> {
 // 8
   static List<Widget> pages = <Widget>[
     const Card1(),
-// TODO: Replace with Card2
-    Container(color: Colors.green),
-// TODO: Replace with Card3
-    Container(color: Colors.blue)
+    const Card2(),
+    const Card3(),
   ];
 // 9
   void _onItemTapped(int index) {
@@ -41,9 +41,9 @@ class HomeState extends State<Home> {
 // 5
         selectedItemColor: Theme.of(context).textSelectionTheme.selectionColor,
 // 10
-currentIndex: _selectedIndex,
+        currentIndex: _selectedIndex,
 // 11
-onTap: _onItemTapped,
+        onTap: _onItemTapped,
 // 6
         items: const [
           BottomNavigationBarItem(
