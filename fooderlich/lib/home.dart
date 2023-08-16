@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooderlich/screens/explore_screen.dart';
+import 'screens/recipes_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,10 +14,9 @@ class HomeState extends State<Home> {
 
   static List<Widget> pages = <Widget>[
     ExploreScreen(),
-    Container(color: Colors.white),
-    // TODO: Replace with RecipesScreen
-    Container(color: Colors.green),
-    Container(color: Colors.blue),
+    RecipesScreen(),
+    
+    Container(color: const Color.fromARGB(255, 46, 93, 131)),
   ];
 
   void _onItemTapped(int index) {
@@ -31,7 +31,7 @@ class HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           'Fooderlich',
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
       body: pages[_selectedIndex],
