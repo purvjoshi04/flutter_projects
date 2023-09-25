@@ -20,16 +20,59 @@ class GroceryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Change this Widgetw
-    return Container(
+    return SizedBox(
       height: 100.0,
-      // TODO: Replace this color
-      color: Colors.red,
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        // TODO: Add Row to group (name, date, importance)
+// TODO: Add Row to group (quantity, checkbox)
+      ]),
+    
     );
   }
-  // TODO: Add BuildImportance()
 
-  // TODO: Add BuildDate()
+  Widget buildImportance() {
+    if (item.importance == Importance.low) {
+      return Text(
+        'Low',
+        style: GoogleFonts.lato(decoration: textDecoration),
+      );
+    } else if (item.importance == Importance.medium) {
+      return Text(
+        'Medium',
+        style: GoogleFonts.lato(
+          fontWeight: FontWeight.w800,
+          decoration: textDecoration,
+        ),
+      );
+    } else if (item.importance == Importance.high) {
+      return Text(
+        'High',
+        style: GoogleFonts.lato(
+          color: Colors.red,
+          fontWeight: FontWeight.w900,
+          decoration: textDecoration,
+        ),
+      );
+    } else {
+      throw Exception('This importance type does not exist');
+    }
+  }
 
-  // TODO: Add buildCheckbox()
+  Widget buildDate() {
+    final dateFormatter = DateFormat('MMMM dd h:mm a');
+    final dateString = dateFormatter.format(item.date);
+    return Text(
+      dateString,
+      style: TextStyle(decoration: textDecoration),
+    );
+  }
+
+  Widget buildCheckbox() {
+    return Checkbox(
+      //1
+      value: item.isComplete,
+      //2
+      onChanged: onComplete,
+    );
+  }
 }
