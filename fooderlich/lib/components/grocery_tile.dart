@@ -23,10 +23,12 @@ class GroceryTile extends StatelessWidget {
     return SizedBox(
       height: 100.0,
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        // TODO: Add Row to group (name, date, importance)
+        //1
+        Row(
+          children: [],
+        )
 // TODO: Add Row to group (quantity, checkbox)
       ]),
-    
     );
   }
 
