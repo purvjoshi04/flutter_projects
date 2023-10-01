@@ -24,7 +24,7 @@ class TodayRecipeListView extends StatelessWidget {
         children: [
           Text(
             'Recipes of the Day 🍳',
-            style: Theme.of(context).textTheme.displayLarge,
+            style: Theme.of(context).textTheme.headline1,
           ),
           const SizedBox(height: 16),
           Container(

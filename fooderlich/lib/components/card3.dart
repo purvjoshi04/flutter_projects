@@ -18,7 +18,7 @@ class Card3 extends StatelessWidget {
         final chip = Chip(
           label: Text(
             element,
-            style: FooderlichTheme.darkTextTheme.bodyLarge,
+            style: FooderlichTheme.darkTextTheme.bodyText1,
           ),
           backgroundColor: Colors.black.withOpacity(0.7),
         );
@@ -42,14 +42,18 @@ class Card3 extends StatelessWidget {
             image: AssetImage(recipe.backgroundImage),
             fit: BoxFit.cover,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(10.0),
+          ),
         ),
         child: Stack(
           children: [
             Container(
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.6),
-                borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+                borderRadius: const BorderRadius.all(
+                  Radius.circular(10.0),
+                ),
               ),
             ),
             Container(
@@ -65,7 +69,7 @@ class Card3 extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     recipe.title,
-                    style: FooderlichTheme.darkTextTheme.displayMedium,
+                    style: FooderlichTheme.darkTextTheme.headline2,
                   ),
                   const SizedBox(height: 30),
                 ],
