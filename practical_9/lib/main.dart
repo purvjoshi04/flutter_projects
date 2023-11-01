@@ -57,7 +57,7 @@ class _ProductListPageState extends State<ProductListPage> {
           final product = products[index];
           return Card(
             child: ListTile(
-              leading: Image.network(product['image'], width: 80, height: 80), // Display the product image
+              leading: Image.network(product['image'], width: 80, height: 80), 
               title: Text(product['title']),
               subtitle: Text('\$${product['price']}'),
             ),
