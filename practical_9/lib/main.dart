@@ -57,6 +57,7 @@ class _ProductListPageState extends State<ProductListPage> {
         itemBuilder: (context, index) {
           final product = products[index];
           return Card(
+            elevation: 10,
             child: ListTile(
               leading: Image.network(product['image'], width: 80, height: 80), 
               title: Text(product['title']),
