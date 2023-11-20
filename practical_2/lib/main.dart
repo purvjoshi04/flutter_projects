@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Theme Switcher App',
       theme: ThemeData(
-        primarySwatch: Colors.green, // Initial theme (EmeraldTheme)
+        primarySwatch: Colors.green, 
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: const MyThemeSwitcherPage(),
@@ -44,11 +44,11 @@ class _MyThemeSwitcherPageState extends State<MyThemeSwitcherPage> {
   Widget build(BuildContext context) {
     final currentTheme = isEmeraldTheme
         ? ThemeData(
-            primarySwatch: Colors.green, // EmeraldTheme
+            primarySwatch: Colors.green, 
             visualDensity: VisualDensity.adaptivePlatformDensity,
           )
         : ThemeData(
-            primarySwatch: Colors.red, // RubyTheme
+            primarySwatch: Colors.red, 
             visualDensity: VisualDensity.adaptivePlatformDensity,
           );
 
@@ -79,7 +79,7 @@ class _MyThemeSwitcherPageState extends State<MyThemeSwitcherPage> {
                 ),
               ),
               const SizedBox(
-                height: 30, // Add space of 20 units
+                height: 30,
               ),
               Text(
                 'Current Theme: ${getThemeName()}',
