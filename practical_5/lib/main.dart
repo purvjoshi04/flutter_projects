@@ -53,7 +53,7 @@ class MyProfile extends StatelessWidget {
                 Chip(
                   label: Text('Hobby 3'),
                 ),
-                // Add more hobbies as needed
+                
               ],
             ),
           ],
